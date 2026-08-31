@@ -1,0 +1,15 @@
+:host {
+  display: block;
+  min-height: 100vh;
+}
+
+.main {
+  max-width: 800px;
+}
+
+
+h1 {
+  font-size: 2rem;
+  color: #ffffff;
+  padding-left: 2.5rem;
+}
