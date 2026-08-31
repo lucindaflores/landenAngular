@@ -2,4 +2,6 @@
 <h2>Aantal: <span>{{aantal}}</span></h2>
 
 
-
+@if (errorMessage) {
+  <div class="validation-errors">{{ errorMessage }}</div>
+}

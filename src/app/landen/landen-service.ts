@@ -5,12 +5,20 @@ export class LandenService {
 
   private readonly landenUrl = 'https://landen-mqok.onrender.com/landen/aantal';
 
-  /* GETS DATA FROM LOCALHOST */
   async getAantal(): Promise<number> {
-    const data = await fetch(this.landenUrl);
-    console.log("STARTS FETCCH");
-    console.log("DATA!" + data);
-    return (await data.json() ?? 0);
+    const response = await fetch(this.landenUrl);
+    console.log("STARTS FETCH");
+    console.log("DATA!" + response);
+
+    if (response.status === 404) {
+      throw new Error('NOT_FOUND');
+    }
+
+    if (!response.ok) {
+      throw new Error('REQUEST_ERROR');
+    }
+
+    return (await response.json() ?? 0);
   }
 
 }
