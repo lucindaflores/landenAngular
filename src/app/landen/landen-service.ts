@@ -8,7 +8,6 @@ export class LandenService {
   async getAantal(): Promise<number> {
     const response = await fetch(this.landenUrl);
     console.log("STARTS FETCH");
-    console.log("DATA!" + response);
 
     if (response.status === 404) {
       throw new Error('NOT_FOUND');

@@ -26,11 +26,7 @@ export class Landen {
 
     try {
       this.aantal = await this.landenService.getAantal();
-      //
       console.log("LANDEN", this.aantal);
-
-      // this.aantalRender = await this.landenService.getAantalRender();
-      //   console.log("AANTAL RENDER", this.aantalRender);
 
     } catch (error) {
       if (error instanceof Error && error.message === 'NOT_FOUND') {
@@ -38,10 +34,7 @@ export class Landen {
       } else {
         this.errorMessage = 'Er is een fout opgetreden.';
       }
-      console.error(error);
       console.log(error);
-
-
     }
 
     this.changeDetectorRef.detectChanges();
