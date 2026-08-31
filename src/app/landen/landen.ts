@@ -13,7 +13,8 @@ export class Landen {
    private changeDetectorRef = inject(ChangeDetectorRef);
 
    aantal: number = 0;
-   landen?: Landen;
+//  aantalRender: number = 0;
+ //  landen?: Landen;
 
   constructor() {
      this.fetchLanden().then();
@@ -22,11 +23,12 @@ export class Landen {
   async fetchLanden() {
 
     try {
-      //this.landen = await this.landenService.getAantal();
+       this.aantal = await this.landenService.getAantal();
+      //
+       console.log("LANDEN", this.aantal);
 
-      //console.log("LANDEN", this.landen.aantal);
-      console.log("HERE");
-
+     // this.aantalRender = await this.landenService.getAantalRender();
+   //   console.log("AANTAL RENDER", this.aantalRender);
 
     } catch (error) {
       console.error(error);
