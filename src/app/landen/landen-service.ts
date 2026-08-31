@@ -1,4 +1,5 @@
 import { Service } from '@angular/core';
+import {Landen} from './landen';
 
 //http://localhost:8080/landen/aantal
 @Service()
@@ -8,7 +9,7 @@ export class LandenService {
 
     //'https://landen-mqok.onrender.com/aantal';
 
-  async getAantal(): Promise<number> {
+  async getAantal(): Promise<Landen> {
     const data = await fetch(this.landenUrl);
     console.log("STARTS FETCCH");
     console.log("DATA!" + data);
