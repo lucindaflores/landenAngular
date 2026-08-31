@@ -18,12 +18,13 @@ export class Landen {
   constructor() {
      this.fetchLanden().then();
   }
+
   async fetchLanden() {
 
     try {
-      this.landen = await this.landenService.getAantal();
+      //this.landen = await this.landenService.getAantal();
 
-      console.log("LANDEN", this.landen.aantal);
+      //console.log("LANDEN", this.landen.aantal);
       console.log("HERE");
 
 
