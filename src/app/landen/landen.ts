@@ -1,5 +1,5 @@
-import {ChangeDetectorRef, Component, inject} from '@angular/core';
-import {LandenService} from './landen-service';
+import { ChangeDetectorRef, Component, inject} from '@angular/core';
+import { LandenService } from './landen-service';
 
 @Component({
   imports: [],

@@ -1,13 +1,11 @@
-import { Component, signal } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
-import {Landen} from './landen/landen';
+import { Component } from '@angular/core';
+import { Landen } from './landen/landen';
 
 @Component({
-  imports: [RouterOutlet, Landen],
+  imports: [Landen],
   selector: 'app-root',
   styleUrl: './app.css',
   templateUrl: './app.html',
 })
 export class App {
-  protected readonly title = signal('landenAngular');
 }
